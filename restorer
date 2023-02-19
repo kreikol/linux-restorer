@@ -26,7 +26,7 @@ eval "$(ssh-agent -s)"
 ssh-add "$2"
 
 # Clonamos el repositorio indicado para los dotfiles 
-git clone ssh://git@github.com/kreikol/$1 $DOTFILES_PATH
+git clone git@github.com/kreikol/$1.git $DOTFILES_PATH
 
 cd $DOTFILES_PATH
 
