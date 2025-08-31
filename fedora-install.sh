@@ -1,5 +1,27 @@
 #!/bin/bash
 
+# --- Verificación de Git ---
+if ! command -v git >/dev/null 2_>&1; then
+    echo "   [INFO] Git no está instalado y es necesario para continuar."
+    echo "   [INFO] El script intentará instalarlo usando 'sudo dnf install git'."
+    read -p "   ¿Deseas continuar con la instalación? (s/N): " confirmacion
+    if [[ "$confirmacion" =~ ^[sS]$ ]]; then
+        echo "   [INFO] Instalando Git..."
+        if sudo dnf install -y git; then
+            echo "   [INFO] Git se ha instalado correctamente."
+        else
+            echo "❌ [ERROR] La instalación de Git ha fallado. Abortando." >&2
+            exit 1
+        fi
+    else
+        echo "   [INFO] Instalación cancelada por el usuario. Abortando."
+        exit 0
+    fi
+fi
+# --- Fin de la verificación de Git ---
+
+
+
 # fedora-install.sh
 #
 # Un script para automatizar la clonación de un repositorio de dotfiles
