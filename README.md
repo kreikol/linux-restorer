@@ -15,7 +15,7 @@ Si prefieres no clonar este repositorio, puedes ejecutar el script directamente 
 > **Nota de seguridad:** Ejecutar scripts directamente desde internet con `bash` requiere confianza en el contenido del mismo. Se recomienda revisar el código del script antes de ejecutarlo.
 
 ```bash
-# Reemplaza <tu_usuario_gh> con tu nombre de usuario de GitHub
+# Reemplaza <nombre_repo> con tu repositorio de dotfiles; y <ruta_clave_ssh> por la clave ssh para acceder a tu repositorio de dotfiles
 bash <(curl -sL https://raw.githubusercontent.com/kreikol/linux-restorer/HEAD/fedora-install.sh) <nombre_repo> <ruta_clave_ssh>
 ```
 
@@ -55,8 +55,8 @@ Este script está diseñado para restaurar un entorno de desarrollo específico 
 #### Instalación Rápida (Online)
 
 ```bash
-# Reemplaza <tu_usuario_gh> con tu nombre de usuario de GitHub
-bash <(curl -sL https://raw.githubusercontent.com/<tu_usuario_gh>/linux-restorer/HEAD/restorer-ubuntu) <nombre_repo> <ruta_clave_ssh>
+# Reemplaza <nombre_repo> con tu repositorio de dotfiles; y <ruta_clave_ssh> por la clave ssh para acceder a tu repositorio de dotfiles
+bash <(curl -sL https://raw.githubusercontent.com/kreikol/linux-restorer/HEAD/restorer-ubuntu) <nombre_repo> <ruta_clave_ssh>
 ```
 
 #### Requisitos
